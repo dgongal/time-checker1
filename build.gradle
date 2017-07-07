@@ -11,7 +11,7 @@ buildscript {
 }
 
 plugins {
-    id "org.sonarqube" version "2.2"
+    id "org.sonarqube" version "2.5"
 }  
 
 apply plugin: 'java'
@@ -30,6 +30,8 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testCompile("org.testng:testng:6.10")
+	testRuntime("org.codehaus.sonar-plugins.java:sonar-jacoco-listeners:1.3")
 }
 
 
